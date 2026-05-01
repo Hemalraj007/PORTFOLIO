@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h1 class="logo">Portfolio</h1>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#aboutme">About me</a>
+    <a href="#aboutme">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  
+  <div class="pfp-wrapper">
+    <img src="hemalraj.jpg" alt="profile">
+  </div>
+
+  <h2 class="title">Hi,I am Hemalraj</h2>
+  <p class="typing-text"></p>
+  <script>
+const text = "I turn ideas into real-world solutions using AI-driven technologies.";
+let i = 0;
+
+function typeEffect(){
+  if(i < text.length){
+    document.querySelector(".typing-text").textContent += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 40); // speed
+  }
+}
+
+typeEffect();
+</script>
+
+  <button onclick="scrollToSection('projects')" class="btn">
+    View Work
+  </button>
+
+</section>
+<section id="aboutme">
+   <div class="about-content">
+      <h3>About me,</h3>
+      <p>
+        I am a student & passionate Web Developer focused on building modern,
+        responsive, and user-friendly websites. I enjoy turning ideas
+        into real digital experiences and continuously improving my skills.
+      </p>
+
+      <p>
+        Currently, I’m working on freelance projects and learning
+        advanced full-stack development to build powerful applications.
+      </p>
+
+</section>
+<section id="skills">
+  <h2 class="section-title">My Skills</h2>
+
+  <div class="skills-container">
+
+    <div class="skill">
+      <p>HTML</p>
+      <div class="progress">
+        <div class="progress-bar html"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>CSS</p>
+      <div class="progress">
+        <div class="progress-bar css"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="progress">
+        <div class="progress-bar js"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>React</p>
+      <div class="progress">
+        <div class="progress-bar react"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <h3>Project 1</h3>
+    <p>Buisness website for friends</p>
+  </div>
+
+  <div class="project-card">
+    <h3>Project 2</h3>
+    <p>Fullstack MERN App</p>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2 style="text-align: center;">Contact</h2>
+
+  <div class="social-icons">
+    <a href="https://wa.me/919150610118" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://instagram.com/hemal_d_rajx_____007" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

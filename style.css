@@ -1,0 +1,341 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background:#0a0a0a;
+  color:white;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 40px;
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.05);
+  z-index:100;
+}
+
+.logo{
+  color:#00f0ff;
+}
+
+.nav-links a{
+  margin-left:20px;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#00f0ff;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+/* PROFILE IMAGE */
+/* WRAPPER */
+.pfp-wrapper{
+  position:relative;
+  margin-bottom:20px;
+  display:inline-block;
+}
+
+/* IMAGE */
+.pfp-wrapper img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  display:block;
+  position:relative;
+  z-index:2;
+}
+
+/* 🔮 GLOW AURA (animated) */
+.pfp-wrapper::before{
+  content:'';
+  position:absolute;
+  top:-10px;
+  left:-10px;
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  background:linear-gradient(45deg,#10b8e6,#10b8e6);
+  filter:blur(0px);
+  opacity:0.5;
+  z-index:1;
+  animation:pulse 3s infinite ease-in-out;
+}
+
+/* ✨ FLOATING EFFECT */
+@keyframes float{
+  0%{ transform:translateY(0px); }
+  50%{ transform:translateY(-5px); }
+  100%{ transform:translateY(0px); }
+}
+
+.pfp-wrapper{
+  animation:float 4s ease-in-out infinite;
+}
+
+/* 🔥 PULSE ANIMATION */
+@keyframes pulse{
+  0%{ opacity:0; transform:scale(1); }
+  50%{ opacity:0.5; transform:scale(1.1); }
+  100%{ opacity:0; transform:scale(1); }
+}
+
+/* 💥 HOVER BOOST */
+.pfp-wrapper:hover::before{
+  filter:blur(0px);
+  opacity:1;
+}
+
+
+
+/* TEXT */
+.title{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.tagline{
+  opacity:0.7;
+  margin-bottom:20px;
+}
+
+/* BUTTON */
+.btn{
+  padding:12px 25px;
+  border:none;
+  background:#00f0ff;
+  color:black;
+  border-radius:25px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#a020f0;
+  color:white;
+}
+/* ABOUT SECTION */
+#aboutme{
+  padding:80px 10%;
+}
+
+/* container layout */
+.aboutme-container{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+/* LEFT IMAGE */
+.aboutme-img{
+  flex:1;
+  text-align:center;
+}
+
+
+/* RIGHT CONTENT */
+.aboutme-content{
+  flex:1;
+}
+
+.aboutme-content h3{
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+.aboutme-content p{
+  margin-bottom:15px;
+  color:#aaa;
+  line-height:1.6;
+}
+
+/* DETAILS BOX */
+.aboutme-details{
+  margin:15px 0;
+}
+
+.aboutme-details p{
+  margin:5px 0;
+  color:#ddd;
+}
+
+/* BUTTON */
+.about-content .btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 20px;
+  background:#00f0ff;
+  color:#000;
+  border-radius:25px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.about-content .btn:hover{
+  background:#00c8d6;
+}
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .about-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .about-img img{
+    width:200px;
+  }
+}
+/* SKILLS SECTION */
+#skills{
+  padding:80px 10%;
+}
+
+/* container */
+.skills-container{
+  max-width:600px;
+  margin:auto;
+}
+
+/* each skill */
+.skill{
+  margin-bottom:20px;
+}
+
+.skill p{
+  margin-bottom:5px;
+}
+
+/* progress background */
+.progress{
+  width:100%;
+  height:10px;
+  background:#222;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+/* animated bar */
+.progress-bar{
+  height:100%;
+  width:0;
+  background:#00f0ff;
+  border-radius:10px;
+  animation:load 2s forwards;
+}
+
+/* individual skill levels */
+.html{ width:90%; }
+.css{ width:85%; }
+.js{ width:75%; }
+.react{ width:70%; }
+
+/* animation */
+@keyframes load{
+  from{width:0;}
+}
+
+/* PROJECTS */
+.projects{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.project-card{
+  margin:20px auto;
+  padding:20px;
+  max-width:300px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 20px #00f0ff;
+}
+
+/* CONTACT */
+.social-icons{
+  text-align: center;
+}
+.social-icons{
+  margin-top:20px;
+}
+
+.social-icons a{
+  display:inline-block;
+  margin:10px;
+  font-size:28px;
+  color:#fff;
+  transition:0.3s;
+}
+
+/* hover effects */
+.social-icons a:hover{
+  transform:scale(1.2);
+}
+
+/* brand colors */
+.social-icons a:nth-child(1):hover{
+  color:#25D366; /* WhatsApp */
+}
+
+.social-icons a:nth-child(2):hover{
+  color:#E1306C; /* Instagram */
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .title{
+    font-size:24px;
+  }
+}
+.typing-text{
+  font-size:18px;
+  color:#aaa;
+  text-align:center;
+}
+
+/* blinking cursor */
+.typing-text::after{
+  content:"|";
+  margin-left:5px;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  0%,100%{opacity:1;}
+  50%{opacity:0;}
+}
