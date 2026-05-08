@@ -1,140 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
-  <meta charset="UTF-8">
-  <title>Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
 </head>
-
 <body>
+    <header>
+        <a href="#" class="logo">Hemalraj</a>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <h1 class="logo">Portfolio</h1>
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#aboutme">About me</a>
-    <a href="#aboutme">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+        <nav>
+            <a href="#home" class="active"> Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills" >Skills</a>
+            <a href="#contact" >Contact</a>
+        </nav>
+    </header>
+    <section id="home" class="active">
+        <div class="home-img">
+            <img src="hemalraj.jpg">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Hemalraj</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I am a student & passionate Web Developer focused on building modern, responsive, and user-friendly websites. I enjoy turning ideas into real digital experiences and continuously improving my skills.
 
-<!-- HERO -->
-<section id="home" class="hero">
-  
-  <div class="pfp-wrapper">
-    <img src="hemalraj.jpg" alt="profile">
-  </div>
+Currently, I’m working on freelance projects and learning advanced full-stack development to build powerful applications.
+</p>
+ <a href="#contact" class="btn">Hire me</a>
 
-  <h2 class="title">Hi,I am Hemalraj</h2>
-  <p class="typing-text"></p>
-  <script>
-const text = "I turn ideas into real-world solutions using AI-driven technologies.";
-let i = 0;
+<!-- SERVICES SECTION -->
+<section id="services" class="services">
+    <h2 class="heading">My <span>Services</span></h2>
 
-function typeEffect(){
-  if(i < text.length){
-    document.querySelector(".typing-text").textContent += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 40); // speed
-  }
-}
+    <div class="services-container">
 
-typeEffect();
-</script>
+        <div class="service-box">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
+            <p>Modern responsive websites with clean UI, smooth animations and high performance.</p>
+        </div>
 
-  <button onclick="scrollToSection('projects')" class="btn">
-    View Work
-  </button>
+        <div class="service-box">
+            <i class="fa-solid fa-palette"></i>
+            <h3>UI / UX Design</h3>
+            <p>Creative and attractive designs focused on better user experience and branding.</p>
+        </div>
 
+        <div class="service-box">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <h3>Responsive Design</h3>
+            <p>Perfectly optimized websites for mobile, tablet and desktop devices.</p>
+        </div>
+
+        <div class="service-box">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Animations</h3>
+            <p><p>Building fast, responsive and visually modern websites for businesses and brands.</p></p>
+        </div>
+
+    </div>
 </section>
-<section id="aboutme">
-   <div class="about-content">
-      <h3>About me,</h3>
-      <p>
-        I am a student & passionate Web Developer focused on building modern,
-        responsive, and user-friendly websites. I enjoy turning ideas
-        into real digital experiences and continuously improving my skills.
-      </p>
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
 
-      <p>
-        Currently, I’m working on freelance projects and learning
-        advanced full-stack development to build powerful applications.
-      </p>
+    <div class="skills-container">
 
-</section>
-<section id="skills">
-  <h2 class="section-title">My Skills</h2>
+        <div class="skill-box">
+            <i class="fa-brands fa-html5"></i>
+            <h3>HTML5</h3>
+        </div>
 
-  <div class="skills-container">
+        <div class="skill-box">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h3>CSS3</h3>
+        </div>
 
-    <div class="skill">
-      <p>HTML</p>
-      <div class="progress">
-        <div class="progress-bar html"></div>
-      </div>
+        <div class="skill-box">
+            <i class="fa-brands fa-js"></i>
+            <h3>JavaScript</h3>
+        </div>
+
+        <div class="skill-box">
+            <i class="fa-brands fa-react"></i>
+            <h3>React</h3>
+        </div>
+
+        <div class="skill-box">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h3>UI Design</h3>
+        </div>
+
     </div>
 
-    <div class="skill">
-      <p>CSS</p>
-      <div class="progress">
-        <div class="progress-bar css"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <p>JavaScript</p>
-      <div class="progress">
-        <div class="progress-bar js"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <p>React</p>
-      <div class="progress">
-        <div class="progress-bar react"></div>
-      </div>
-    </div>
-
-  </div>
 </section>
-
-<!-- PROJECTS -->
-<section id="projects" class="projects">
-
-  <h2>Projects</h2>
-
-  <div class="project-card">
-    <h3>Project 1</h3>
-    <p>Buisness website for friends</p>
-  </div>
-
-  <div class="project-card">
-    <h3>Project 2</h3>
-    <p>Fullstack MERN App</p>
-  </div>
-
-</section>
-
-<!-- CONTACT -->
+    </div>
+<!-- CONTACT SECTION -->
 <section id="contact" class="contact">
-  <h2 style="text-align: center;">Contact</h2>
 
-  <div class="social-icons">
-    <a href="https://wa.me/919150610118" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-    </a>
+    <h2 class="heading">Get In <span>Touch</span></h2>
 
-    <a href="https://instagram.com/hemal_d_rajx_____007" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
+    <p class="contact-text">
+        Ready to build something amazing?  
+        Feel free to contact me through any platform below.
+    </p>
+
+    <div class="contact-cards">
+
+       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hemalrajpc2007@gmail.com" target="_blank" class="contact-card">
+
+    <i class="fa-solid fa-envelope"></i>
+    <h3>Email</h3>
+    <span>hemalrajpc2007@gmail.com</span>
+
+</a>
+        <a href="https://wa.me/919150610118" target="_blank" class="contact-card">
+            <i class="fa-brands fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <span>Chat Directly</span>
+        </a>
+
+        <a href="https://instagram.com/hemal_d_rajx_____007" target="_blank" class="contact-card">
+            <i class="fa-brands fa-instagram"></i>
+            <h3>Instagram</h3>
+            <span>@hemal_d_rajx_____007</span>
+        </a>
+
+        <a href="https://github.com/Hemalraj007" target="_blank" class="contact-card">
+            <i class="fa-brands fa-github"></i>
+            <h3>GitHub</h3>
+            <span>View Projects</span>
+        </a>
+
+    </div>
+
+
+            <div class="social-icons">
+               <a href="https://www.linkedin.com/in/hemalraj-p-64b6173b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BFwQtQwJlTHGgSLIZWCkUbQ%3D%3D" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+</a>
+                <a href="https://github.com/Hemalraj007"><i class="fa-brands fa-github"></i></a> 
+                <a href="https://x.com/Hemal_D_raj_x"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://instagram.com/hemal_d_rajx_____007" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+           
+        </div>
+    
 </section>
-
-<script src="script.js"></script>
 
 </body>
 </html>
